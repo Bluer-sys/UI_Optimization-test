@@ -6,10 +6,11 @@ namespace TopPanel
 	public class TopPanelController : MonoBehaviour
 	{
 		[SerializeField] private List<TaskTab> _tabs;
+		[SerializeField] private int _startTask;
 
 		private void Start()
 		{
-			SetTask( _tabs[0].Panel );
+			SetTask( _tabs[_startTask - 1].Panel );
 		}
 
 		private void OnEnable()
